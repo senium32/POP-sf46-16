@@ -30,8 +30,8 @@ namespace POP_sf46_16
                 Username = "Gachimuchi",
                 Password = "billybogotac",
                 Tip_Korisnika = "Lud"
-                
-                
+
+
             };
             var k2 = new Korisnik
             {
@@ -54,7 +54,7 @@ namespace POP_sf46_16
                 MaticniBroj = 2013124,
                 Telefon = "021/461-018",
                 Websajt = "nema"
-                
+
             };
             var tn2 = new TipNamestaja
             {
@@ -103,18 +103,20 @@ namespace POP_sf46_16
             korisnici.Add(k1);
             korisnici.Add(k2);
 
-            Console.WriteLine("  .::Dobrodosli u  "+s1.Naziv+"::.");
-            Meni();
+            Console.WriteLine("  .::Dobrodosli u  " + s1.Naziv + "::.");
+            LogIn();
 
         }
-        private static void Meni() {
+        private static void Meni()
+        {
             Console.WriteLine("  ");
             Console.WriteLine("  Izaberite jednu od sledecih opcija:");
             Console.WriteLine("  1 - Rad sa namestajem");
             Console.WriteLine("  2 - Rad sa korisnicima");
 
             int izbor = 0;
-            try {
+            try
+            {
                 string str_izbor = Console.ReadLine();
                 izbor = int.Parse(str_izbor);
                 if (izbor == 1)
@@ -127,12 +129,14 @@ namespace POP_sf46_16
                     Console.WriteLine("  Izabrali ste rad sa korisnicima");
                     GlavniMeni2();
                 }
-                else if (izbor < 1 || izbor > 2) {
+                else if (izbor < 1 || izbor > 2)
+                {
                     Console.WriteLine("  E naopako");
                     Meni();
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 Console.WriteLine("  Samo broj ffs");
                 Meni();
             }
@@ -156,7 +160,7 @@ namespace POP_sf46_16
 
         private static void GlavniMeni2()
         {
-///            funkcija za ispis menija i pozivanje odgovarajuce funkcije
+            ///            funkcija za ispis menija i pozivanje odgovarajuce funkcije
             Console.WriteLine("  ");
             Console.WriteLine("  Izaberite jednu od sledecih opcija:");
             Console.WriteLine("  1 - Prikaz svih korisnika");
@@ -166,8 +170,8 @@ namespace POP_sf46_16
             Console.WriteLine("  5 - povratak na izbor menija");
             Console.WriteLine("  6 - izlaz iz aplikacije");
             Provera_Unosa2();
-            
-            
+
+
         }
 
         private static void Provera_Unosa()
@@ -194,7 +198,8 @@ namespace POP_sf46_16
                     Console.WriteLine("  Izabrali ste izmenu namestaja: ");
                     Novi_izmena(3);
                 }
-                else if (izbor == 4) {
+                else if (izbor == 4)
+                {
                     Brisanje_namestaja();
                 }
                 else if (izbor == 5)
@@ -210,7 +215,7 @@ namespace POP_sf46_16
             {
                 Console.WriteLine("morate uneti ceo broj!");
                 Provera_Unosa();
-               
+
             }
         }
         private static void Provera_Unosa2()
@@ -270,12 +275,12 @@ namespace POP_sf46_16
             try
             {
                 string izbor = Console.ReadLine();
-                
+
                 foreach (Korisnik n in korisnici)
                 {
                     if (izbor.Equals(n.Username))
                     {
-                        Console.WriteLine("Uspesno ste obrisali " + n.Ime+" "+n.Prezime);
+                        Console.WriteLine("Uspesno ste obrisali " + n.Ime + " " + n.Prezime);
                         korisnici.Remove(n);
                         GlavniMeni2();
                     }
@@ -291,13 +296,13 @@ namespace POP_sf46_16
 
         private static void Prikaz_Korisnika()
         {
-///            Funkcija koja prolazi kroz listu sa objektima i prikazuje njihove atribute
+            ///            Funkcija koja prolazi kroz listu sa objektima i prikazuje njihove atribute
 
 
             Console.WriteLine("  Izabrali ste prikaz namestaja: ");
             foreach (Korisnik n in korisnici)
             {
-                Console.WriteLine("|Ine: " + n.Ime + "|" + "Prezime: " + n.Prezime + " | " + "Username: " 
+                Console.WriteLine("|Ine: " + n.Ime + "|" + "Prezime: " + n.Prezime + " | " + "Username: "
                     + n.Username + "|" + "Password: " + n.Password + "|" + "Tip korisnika: " + n.Tip_Korisnika + "|");
                 Console.WriteLine("");
             };
@@ -318,7 +323,8 @@ namespace POP_sf46_16
                 int izbor = int.Parse(str_izbor);
                 foreach (Namestaj n in namestaj)
                 {
-                    if (izbor == n.Id) {
+                    if (izbor == n.Id)
+                    {
                         Console.WriteLine("Uspesno ste obrisali " + n.Naziv);
                         namestaj.Remove(n);
                         GlavniMeni();
@@ -326,7 +332,8 @@ namespace POP_sf46_16
                 }
                 Brisanje_namestaja();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 Console.WriteLine("morate uneti ceo broj!");
                 Brisanje_namestaja();
             }
@@ -336,15 +343,15 @@ namespace POP_sf46_16
 
         private static void izlaz()
         {
-///            funkcija koja izlazi iz aplikacije
+            ///            funkcija koja izlazi iz aplikacije
             Console.WriteLine("izlazim iz aplikacije!");
             Environment.Exit(0);
         }
 
         private static void Novi_izmena(int br)
         {
-///            funkcija koja prima izbor iz menija, i prosledjuje ga metodi koja
-///            u zavisnosti od izbora ili daje izmenu namestaja ili dodavanje novog.
+            ///            funkcija koja prima izbor iz menija, i prosledjuje ga metodi koja
+            ///            u zavisnosti od izbora ili daje izmenu namestaja ili dodavanje novog.
             int izbor = br;
             if (izbor == 2)
             {
@@ -375,7 +382,8 @@ namespace POP_sf46_16
                     Novi_izmena(2);
                 }
             }
-            else if(izbor == 3){
+            else if (izbor == 3)
+            {
                 Console.WriteLine("   ");
                 Console.WriteLine("  Unesite Id namestaja koji zelite da izmenite: ");
                 int id = 0;
@@ -389,7 +397,7 @@ namespace POP_sf46_16
                         if (id == n.Id)
                         {
                             Console.WriteLine("namestaj je: ");
-                            Console.WriteLine("|Id: " + n.Id + "|" + "Naziv: " + n.Naziv + " | " + "Kolicina: " 
+                            Console.WriteLine("|Id: " + n.Id + "|" + "Naziv: " + n.Naziv + " | " + "Kolicina: "
                                 + n.Kolicina + "|" + "Cena: " + n.Cena + "|" + "Tip namestaja: " + n.Tip_Namestaja.Naziv + "|");
                             Unos_vrednosti_namestaja(id, 3);
                         }
@@ -409,9 +417,9 @@ namespace POP_sf46_16
         }
         private static void Unos_vrednosti_namestaja(int kd, int izbor)
         {
-///            funkcija koja prima id i izbor i na osnovu toga
-///            menja ili dodaje novi namestaj.
-            
+            ///            funkcija koja prima id i izbor i na osnovu toga
+            ///            menja ili dodaje novi namestaj.
+
             int id = kd;
             int izborr = izbor;
             try
@@ -473,7 +481,8 @@ namespace POP_sf46_16
                         Unos_vrednosti_namestaja(id, izborr);
                     }
                 }
-                else if (izborr == 3) {
+                else if (izborr == 3)
+                {
                     try
                     {
 
@@ -495,7 +504,7 @@ namespace POP_sf46_16
                                         GlavniMeni();
                                     }
                                 }
-                                
+
                                 Console.WriteLine("Uspesno ste izmenili namestaj!");
                                 GlavniMeni();
                             }
@@ -508,9 +517,9 @@ namespace POP_sf46_16
                         Unos_vrednosti_namestaja(id, izborr);
                     }
                 }
-               
 
-            
+
+
             }
             catch (Exception ex)
             {
@@ -522,11 +531,12 @@ namespace POP_sf46_16
 
         private static void Prikaz_Namestaja()
         {
-///            Funkcija koja prolazi kroz listu sa objektima i prikazuje njihove atribute
-            
+            ///            Funkcija koja prolazi kroz listu sa objektima i prikazuje njihove atribute
+
             Console.WriteLine("  Izabrali ste prikaz namestaja: ");
-            foreach (Namestaj n in namestaj) {
-                Console.WriteLine("|Id: "+n.Id + "|"+"Naziv: "+n.Naziv + " | "+"Kolicina: " + n.Kolicina + "|" +"Cena: "+n.Cena+"|"+"Tip namestaja: "+n.Tip_Namestaja.Naziv+"|");
+            foreach (Namestaj n in namestaj)
+            {
+                Console.WriteLine("|Id: " + n.Id + "|" + "Naziv: " + n.Naziv + " | " + "Kolicina: " + n.Kolicina + "|" + "Cena: " + n.Cena + "|" + "Tip namestaja: " + n.Tip_Namestaja.Naziv + "|");
                 Console.WriteLine("");
             };
             GlavniMeni();
@@ -546,7 +556,7 @@ namespace POP_sf46_16
                 try
                 {
                     username = Console.ReadLine();
-                    
+
                     foreach (Korisnik n in korisnici)
                     {
                         if (username.Equals(n.Username))
@@ -569,7 +579,7 @@ namespace POP_sf46_16
             {
                 Console.WriteLine("   ");
                 Console.WriteLine("  Unesite username korisnika kojeg zelite da izmenite: ");
-                
+
 
                 try
                 {
@@ -623,7 +633,8 @@ namespace POP_sf46_16
                     {
 
                         string tip = Console.ReadLine();
-                        if (tip.Equals("Lud") || tip.Equals("Niza klasa")) {
+                        if (tip.Equals("Lud") || tip.Equals("Niza klasa"))
+                        {
                             var k = new Korisnik
                             {
                                 Ime = ime,
@@ -654,8 +665,10 @@ namespace POP_sf46_16
                         string tip = Console.ReadLine();
                         if (tip.Equals("Lud") || tip.Equals("Niza klasa"))
                         {
-                            foreach (Korisnik n in korisnici) {
-                                if (n.Username.Equals(username)) {
+                            foreach (Korisnik n in korisnici)
+                            {
+                                if (n.Username.Equals(username))
+                                {
                                     n.Ime = ime;
                                     n.Prezime = prezime;
                                     n.Password = password;
@@ -665,10 +678,10 @@ namespace POP_sf46_16
                                     GlavniMeni2();
                                 }
                             }
-                            
-                        }
 
                         }
+
+                    }
 
                     catch (Exception ex)
                     {
@@ -687,7 +700,32 @@ namespace POP_sf46_16
 
             }
         }
+        private static void LogIn()
+        {
+            Console.WriteLine("Molim unesite vase korisnicko ime: ");
+            string unos1 = Console.ReadLine();
+            foreach (Korisnik k in korisnici)
+            {
+                if (unos1.Equals(k.Username))
+                {
+                    Console.WriteLine("Sada unesite lozinku: ");
+                    string unos2 = Console.ReadLine();
+                    if (unos2.Equals(k.Password))
+                    {
+                        Console.WriteLine("BRAVO! ulogovani ste kao: " + k.Ime + " " + k.Prezime);
+                        Meni();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Podaci koje ste uneli nisu ispravni");
+                        LogIn();
+                    }
+                }
+            }
+            Console.WriteLine("Nema takvog korisnika!");
+            LogIn();
 
-    }
+        }
     }
 
+}
