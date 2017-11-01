@@ -104,7 +104,7 @@ namespace POP_sf46_16
             korisnici.Add(k2);
 
             Console.WriteLine("  .::Dobrodosli u  "+s1.Naziv+"::.");
-            Meni();
+            LogIn();
 
         }
         private static void Meni() {
@@ -686,6 +686,36 @@ namespace POP_sf46_16
                 GlavniMeni2();
 
             }
+        }
+
+        private static void LogIn() {
+            Console.WriteLine("Molim unesite vase korisnicko ime: ");
+            string unos1 = Console.ReadLine();
+            foreach (Korisnik k in korisnici) {
+                if (unos1.Equals(k.Username)) {
+                    Console.WriteLine("Sada unesite lozinku: ");
+                
+                    string unos2 = Console.ReadLine();
+                    if (unos2.Equals(k.Password))
+                    {
+                        Console.WriteLine("BRAVO! ulogovani ste kao: " + k.Ime + " " + k.Prezime);
+                        Meni();
+
+
+                    }
+                    else {
+                        Console.WriteLine("Podaci koje ste uneli nisu ispravni");
+                        LogIn();
+                    }
+                        
+
+              
+                }
+                
+            }
+            Console.WriteLine("Nema takvog korisnika!");
+            LogIn();
+
         }
 
     }
