@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namestaj>
+    <Id>1</Id>
+    <Naziv>DM krevet</Naziv>
+    <Cena>99.99</Cena>
+    <Kolicina>12</Kolicina>
+    <Tip_Namestaja>1</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>2</Id>
+    <Naziv>Plakar od iverice</Naziv>
+    <Cena>69.99</Cena>
+    <Kolicina>4</Kolicina>
+    <Tip_Namestaja>2</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>3</Id>
+    <Naziv>Narkotelja</Naziv>
+    <Cena>420</Cena>
+    <Kolicina>15</Kolicina>
+    <Tip_Namestaja>3</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>4</Id>
+    <Naziv>Dusek za pod</Naziv>
+    <Cena>1000</Cena>
+    <Kolicina>7</Kolicina>
+    <Tip_Namestaja>1</Tip_Namestaja>
+  </Namestaj>
+</ArrayOfNamestaj>

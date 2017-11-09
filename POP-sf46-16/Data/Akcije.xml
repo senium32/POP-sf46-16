@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAkcija xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Akcija>
+    <Id>1</Id>
+    <Datum_Pocetka>2017-10-09T00:00:00</Datum_Pocetka>
+    <Popust>10.99</Popust>
+    <Datum_Zavrsetka>2017-10-16T00:00:00</Datum_Zavrsetka>
+  </Akcija>
+</ArrayOfAkcija>

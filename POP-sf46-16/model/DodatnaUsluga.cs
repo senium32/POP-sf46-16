@@ -8,5 +8,9 @@ namespace POP_sf46_16.model
 {
     public class DodatnaUsluga
     {
+        public int Id { get; set; }
+        public string Naziv { get; set; }
+        public double Cena { get; set; }
+        public bool Obrisan { get; set; }
     }
 }

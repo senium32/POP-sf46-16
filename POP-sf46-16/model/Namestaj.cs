@@ -12,7 +12,7 @@ namespace POP_sf46_16.model
         public string Naziv { get; set; }
         public double Cena { get; set; }
         public int Kolicina { get; set; }
-        public TipNamestaja Tip_Namestaja { get; set; }
+        public int Tip_Namestaja { get; set; }
     
     }
 }

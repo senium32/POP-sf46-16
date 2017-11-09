@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKorisnik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Korisnik>
+    <Ime>Ben</Ime>
+    <Prezime>Dover</Prezime>
+    <Username>Gachimuchi</Username>
+    <Password>billybogotac</Password>
+    <Tip_Korisnika>Lud</Tip_Korisnika>
+  </Korisnik>
+  <Korisnik>
+    <Ime>Orange</Ime>
+    <Prezime>Black</Prezime>
+    <Username>T H I C C</Username>
+    <Password>extra thicc</Password>
+    <Tip_Korisnika>Niza klasa</Tip_Korisnika>
+  </Korisnik>
+</ArrayOfKorisnik>
