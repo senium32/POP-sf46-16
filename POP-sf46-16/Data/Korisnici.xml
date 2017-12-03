@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfKorisnik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Korisnik>
-    <Ime>Ben</Ime>
-    <Prezime>Dover</Prezime>
-    <Username>Gachimuchi</Username>
-    <Password>billybogotac</Password>
-    <Tip_Korisnika>Lud</Tip_Korisnika>
+    <Username>Sohla</Username>
+    <Ime>Milos</Ime>
+    <Prezime>Curcic</Prezime>
+    <Password>563a2a44acc5da4c581ad0fb481cf12595347ccc</Password>
+    <Tip_Korisnika>korisnik</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
   </Korisnik>
   <Korisnik>
-    <Ime>Orange</Ime>
-    <Prezime>Black</Prezime>
-    <Username>T H I C C</Username>
-    <Password>extra thicc</Password>
-    <Tip_Korisnika>Niza klasa</Tip_Korisnika>
+    <Username>Propad</Username>
+    <Ime>Milan</Ime>
+    <Prezime>Popadic</Prezime>
+    <Password>9e0e0b86621d381ef720e48ec9e6434c5d311e5e</Password>
+    <Tip_Korisnika>korisnik</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <Username>Senium</Username>
+    <Ime>Aleksa</Ime>
+    <Prezime>Protic</Prezime>
+    <Password>42525bb6d3b0dc06bb78ae548733e8fbb55446b3</Password>
+    <Tip_Korisnika>admin</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <Username>Varikap</Username>
+    <Ime>Nikola</Ime>
+    <Prezime>Popadic</Prezime>
+    <Password>0d1d3aaf374c776db22f30d770f71f4b5fdb3dd5</Password>
+    <Tip_Korisnika>admin</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <Username>Debeli</Username>
+    <Ime>Milan</Ime>
+    <Prezime>Gordic</Prezime>
+    <Password>ca98eea8db5922633f3f36bea347b962dda4cb9d</Password>
+    <Tip_Korisnika>korisnik</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <Username>Programer</Username>
+    <Ime>Milan</Ime>
+    <Prezime>Miljus</Prezime>
+    <Password>25214e5e72e12e161b972d74e76f81b4fb5a429b</Password>
+    <Tip_Korisnika>korisnik</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <Username>Gachimuchi</Username>
+    <Ime>Cigojner</Ime>
+    <Prezime>Brankov</Prezime>
+    <Password>8a8086b1eca834115454f9650fdf31ba9d7496f5</Password>
+    <Tip_Korisnika>korisnik</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <Username>Ugor</Username>
+    <Ime>Igor</Ime>
+    <Prezime>Hadzija</Prezime>
+    <Password>6284383a967c5ffab82228e293e820c38ffe0469</Password>
+    <Tip_Korisnika>korisnik</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
+  </Korisnik>
+  <Korisnik>
+    <Username>Sonjo</Username>
+    <Ime>Sonja</Ime>
+    <Prezime>Protic</Prezime>
+    <Password>3cae9563fead45e28e50c4cd45f4eb11cc723fd7</Password>
+    <Tip_Korisnika>korisnik</Tip_Korisnika>
+    <Obrisan>false</Obrisan>
   </Korisnik>
 </ArrayOfKorisnik>

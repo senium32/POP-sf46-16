@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POP_sf46_16.model
+namespace POP_sf46_16_GUI.model
 {
-    public class DodatnaUsluga
+   public class DodatnaUsluga
     {
         public int Id { get; set; }
         public string Naziv { get; set; }

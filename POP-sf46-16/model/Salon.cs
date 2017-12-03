@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POP_sf46_16.model
+namespace POP_sf46_16_GUI.model
 {
     public class Salon
     {
@@ -17,6 +17,5 @@ namespace POP_sf46_16.model
         public string Telefon { get; set; }
         public int MaticniBroj { get; set; }
         public string Websajt { get; set; }
-
     }
 }

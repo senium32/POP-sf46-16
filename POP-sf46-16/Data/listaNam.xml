@@ -2,30 +2,174 @@
 <ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Namestaj>
     <Id>1</Id>
-    <Naziv>DM krevet</Naziv>
-    <Cena>99.99</Cena>
-    <Kolicina>12</Kolicina>
-    <Tip_Namestaja>1</Tip_Namestaja>
+    <Naziv>Kotelja</Naziv>
+    <Cena>300</Cena>
+    <Kolicina>42</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <NaPopustu>
+      <Id>1</Id>
+      <Datum_Pocetka>2017-10-09T00:00:00</Datum_Pocetka>
+      <Datum_Zavrsetka>2017-10-16T00:00:00</Datum_Zavrsetka>
+      <Popust>30</Popust>
+    </NaPopustu>
+    <TipNamestaja>
+      <Id>3</Id>
+      <Naziv>fotelja</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>true</NaStanju>
+    <Tip_Namestaja>3</Tip_Namestaja>
   </Namestaj>
   <Namestaj>
     <Id>2</Id>
-    <Naziv>Plakar od iverice</Naziv>
-    <Cena>69.99</Cena>
+    <Naziv>Lenja Vreca</Naziv>
+    <Cena>100</Cena>
     <Kolicina>4</Kolicina>
-    <Tip_Namestaja>2</Tip_Namestaja>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <TipNamestaja>
+      <Id>1</Id>
+      <Naziv>krevet</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>true</NaStanju>
+    <Tip_Namestaja>1</Tip_Namestaja>
   </Namestaj>
   <Namestaj>
     <Id>3</Id>
-    <Naziv>Narkotelja</Naziv>
-    <Cena>420</Cena>
-    <Kolicina>15</Kolicina>
+    <Naziv>Novi</Naziv>
+    <Cena>80</Cena>
+    <Kolicina>12</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <TipNamestaja>
+      <Id>3</Id>
+      <Naziv>fotelja</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>true</NaStanju>
     <Tip_Namestaja>3</Tip_Namestaja>
   </Namestaj>
   <Namestaj>
     <Id>4</Id>
-    <Naziv>Dusek za pod</Naziv>
-    <Cena>1000</Cena>
-    <Kolicina>7</Kolicina>
+    <Naziv>Novi2</Naziv>
+    <Cena>32</Cena>
+    <Kolicina>11</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <TipNamestaja>
+      <Id>1</Id>
+      <Naziv>krevet</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>true</NaStanju>
     <Tip_Namestaja>1</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>5</Id>
+    <Naziv>Dasa</Naziv>
+    <Cena>9</Cena>
+    <Kolicina>14</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <NaPopustu>
+      <Id>2</Id>
+      <Datum_Pocetka>2017-10-09T00:00:00</Datum_Pocetka>
+      <Datum_Zavrsetka>2017-10-16T00:00:00</Datum_Zavrsetka>
+      <Popust>25</Popust>
+    </NaPopustu>
+    <TipNamestaja>
+      <Id>2</Id>
+      <Naziv>plakar</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>true</NaStanju>
+    <Tip_Namestaja>2</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>6</Id>
+    <Naziv>DASD</Naziv>
+    <Cena>21</Cena>
+    <Kolicina>12</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <NaPopustu>
+      <Id>3</Id>
+      <Datum_Pocetka>2017-10-09T00:00:00</Datum_Pocetka>
+      <Datum_Zavrsetka>2017-10-16T00:00:00</Datum_Zavrsetka>
+      <Popust>15</Popust>
+    </NaPopustu>
+    <TipNamestaja>
+      <Id>1</Id>
+      <Naziv>krevet</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>false</NaStanju>
+    <Tip_Namestaja>1</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>7</Id>
+    <Naziv>Sada</Naziv>
+    <Cena>31</Cena>
+    <Kolicina>4</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <TipNamestaja>
+      <Id>2</Id>
+      <Naziv>plakar</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>false</NaStanju>
+    <Tip_Namestaja>2</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>8</Id>
+    <Naziv>Svetljika</Naziv>
+    <Cena>100</Cena>
+    <Kolicina>4</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <TipNamestaja>
+      <Id>4</Id>
+      <Naziv>Lampa</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>false</NaStanju>
+    <Tip_Namestaja>4</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>9</Id>
+    <Naziv>Novi</Naziv>
+    <Cena>32</Cena>
+    <Kolicina>22</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <TipNamestaja>
+      <Id>4</Id>
+      <Naziv>Lampa</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>false</NaStanju>
+    <Tip_Namestaja>4</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>10</Id>
+    <Naziv>Novi</Naziv>
+    <Cena>32</Cena>
+    <Kolicina>22</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <TipNamestaja>
+      <Id>1</Id>
+      <Naziv>krevet</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>false</NaStanju>
+    <Tip_Namestaja>1</Tip_Namestaja>
+  </Namestaj>
+  <Namestaj>
+    <Id>11</Id>
+    <Naziv>asda</Naziv>
+    <Cena>21</Cena>
+    <Kolicina>32</Kolicina>
+    <AkcijskaCenaId>0</AkcijskaCenaId>
+    <TipNamestaja>
+      <Id>3</Id>
+      <Naziv>fotelja</Naziv>
+      <Obrisan>false</Obrisan>
+    </TipNamestaja>
+    <NaStanju>false</NaStanju>
+    <Tip_Namestaja>3</Tip_Namestaja>
   </Namestaj>
 </ArrayOfNamestaj>

@@ -1,16 +1,88 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POP_sf46_16.model
+namespace POP_sf46_16_GUI.model
 {
-    public class Akcija
+    public class Akcija : INotifyPropertyChanged, ICloneable
     {
-        public int Id { get; set; }
-        public DateTime Datum_Pocetka { get; set; }
-        public decimal Popust { get; set; }
-        public DateTime Datum_Zavrsetka { get; set; }
+        private int id;
+        private DateTime datum_pocetka;
+        private int popust;
+        private DateTime datum_zavrsetka;
+
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                OnPropertyChanged("Id");
+            }
+        }
+        public DateTime Datum_Pocetka
+        {
+            get { return datum_pocetka; }
+            set
+            {
+                datum_pocetka = value;
+                OnPropertyChanged("Datum_Pocetka");
+            }
+        }
+        public DateTime Datum_Zavrsetka
+        {
+            get { return datum_zavrsetka; }
+            set { datum_zavrsetka = value; }
+        }
+
+
+        public int Popust
+        {
+            get { return popust; }
+            set { popust = value;
+                OnPropertyChanged("Popust");
+            }
+        }
+
+       
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public static Akcija GetById(int? Id)
+        {
+            foreach (var popust in RadSaPodacima.Instance.Akcije)
+            {
+                if (popust.Id == Id)
+                {
+                    return popust;
+                }
+            }
+            return null;
+        }
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        public override string ToString()
+        {
+            return $"Popust: {Popust}%";
+        }
+
+        public object Clone()
+        {
+            return new Akcija
+            {
+                Id = id,
+                Datum_Pocetka = datum_pocetka,
+                Datum_Zavrsetka = datum_zavrsetka,
+                Popust = popust
+            };
+        }
     }
+
 }

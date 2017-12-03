@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POP_sf46_16.model
+namespace POP_sf46_16_GUI.model
 {
     public class ProdajaNamestaja
     {
@@ -12,5 +12,6 @@ namespace POP_sf46_16.model
         public DateTime Datum_Prodaje { get; set; }
         public int Broj_Racuna { get; set; }
         public string Kupac { get; set; }
+
     }
 }

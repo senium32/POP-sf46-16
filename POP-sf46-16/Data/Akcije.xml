@@ -3,7 +3,25 @@
   <Akcija>
     <Id>1</Id>
     <Datum_Pocetka>2017-10-09T00:00:00</Datum_Pocetka>
-    <Popust>10.99</Popust>
     <Datum_Zavrsetka>2017-10-16T00:00:00</Datum_Zavrsetka>
+    <Popust>30</Popust>
+  </Akcija>
+  <Akcija>
+    <Id>2</Id>
+    <Datum_Pocetka>2017-10-09T00:00:00</Datum_Pocetka>
+    <Datum_Zavrsetka>2017-10-16T00:00:00</Datum_Zavrsetka>
+    <Popust>25</Popust>
+  </Akcija>
+  <Akcija>
+    <Id>3</Id>
+    <Datum_Pocetka>2017-10-09T00:00:00</Datum_Pocetka>
+    <Datum_Zavrsetka>2017-10-16T00:00:00</Datum_Zavrsetka>
+    <Popust>15</Popust>
+  </Akcija>
+  <Akcija>
+    <Id>4</Id>
+    <Datum_Pocetka>2017-12-06T00:00:00</Datum_Pocetka>
+    <Datum_Zavrsetka>2017-12-30T00:00:00</Datum_Zavrsetka>
+    <Popust>30</Popust>
   </Akcija>
 </ArrayOfAkcija>
