@@ -32,6 +32,10 @@ namespace POP_sf46_16_GUI
 
         public Korisnik IzabraniKorisnik { get; set; }
 
+        public ProdajaNamestaja IzabranaProdaja { get; set; }
+
+        public ProdajaNamestaja Prodaja { get; set; }
+
         public DodatnaUsluga IzabranaUsluga { get; set; }
 
         public DodatnaUsluga DodatnaUsluga { get; set; }
@@ -145,6 +149,10 @@ namespace POP_sf46_16_GUI
         {
             return ((Akcija)obj).Obrisan == false;
         }
+        private bool PrikazNeobrisaneProdaje(object obj)
+        {
+            return ((ProdajaNamestaja)obj).Obrisan == false;
+        }
 
         private void btnIzlaz_Click(object sender, RoutedEventArgs e)
         {
@@ -162,6 +170,21 @@ namespace POP_sf46_16_GUI
             dgPrikaz.DataContext = this;
             view = CollectionViewSource.GetDefaultView(RadSaPodacima.Instance.Korisnici);
             view.Filter = PrikazNeobrisanogKorisnika;
+            dgPrikaz.ItemsSource = view;
+            dgPrikaz.AutoGeneratingColumn += prikaz1;
+            dgPrikaz.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Star);
+        }
+        private void btnProdaja_Click(object sender, RoutedEventArgs e)
+        {
+            operacija = "prodaja";
+            btnDodajAkciju.Visibility = Visibility.Hidden;
+            Objekat = null;
+            Objekat = IzabranaProdaja;
+            dgPrikaz.ItemsSource = null;
+            dgPrikaz.IsSynchronizedWithCurrentItem = true;
+            dgPrikaz.DataContext = this;
+            view = CollectionViewSource.GetDefaultView(RadSaPodacima.Instance.ProdajaNamestaja);
+            view.Filter = PrikazNeobrisaneProdaje;
             dgPrikaz.ItemsSource = view;
             dgPrikaz.AutoGeneratingColumn += prikaz1;
             dgPrikaz.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Star);
@@ -258,6 +281,20 @@ namespace POP_sf46_16_GUI
                     window.ShowDialog();
                     RadSaPodacima.Instance.DodatnaUsluga.Clear();
                     Databases.DodatnaUslugaDatabase.popunjavanjeDodatneUsluge();
+                    view.Refresh();
+                }
+                if (operacija.Equals("prodaja"))
+                {
+                    var zaDodati = new ProdajaNamestaja
+                    {
+                        Kupac = ""
+                    };
+                    var window = new ProdajaWindow(zaDodati);
+                    window.ShowDialog();
+                    RadSaPodacima.Instance.ProdajaNamestaja.Clear();
+                    RadSaPodacima.Instance.Namestaj.Clear();
+                    Databases.ProdajaNamestajaDatabase.popunjavanjeProdaja();
+                    Databases.NamestajDatabase.popunjavanjeNamestaja();
                     view.Refresh();
                 }
                 else if (operacija.Equals("tipNamestaja"))
@@ -368,6 +405,10 @@ namespace POP_sf46_16_GUI
                     MessageBox.Show(" Morate izabrati objekat za izmenu!! ");
                 }
             }
+            else if (operacija.Equals("prodaja"))
+            {
+                MessageBox.Show("Ne mozete menjati racun!");
+            }
             else if (operacija.Equals("akcija"))
             {
                 if (dgPrikaz.SelectedItem != null)
@@ -467,6 +508,23 @@ namespace POP_sf46_16_GUI
                         RadSaPodacima.Instance.Akcije.Remove(ob);
                         RadSaPodacima.Instance.Akcije.Clear();
                         Databases.AkcijaDatabase.popunjavanjeAkcija();
+                        view.Refresh();
+                    }
+                }
+                else if (operacija.Equals("prodaja"))
+                {
+                    var lista_prodaje = RadSaPodacima.Instance.ProdajaNamestaja;
+                    var ob = (ProdajaNamestaja)Objekat;
+                    if (ob == null)
+                    {
+                        MessageBox.Show(" Morate izabrati objekat za brisanje!! ");
+                    }
+                    else if (ob != null)
+                    {
+                        ProdajaNamestajaDatabase.ProdajaIzbrisi(ob);
+                        RadSaPodacima.Instance.ProdajaNamestaja.Remove(ob);
+                        RadSaPodacima.Instance.ProdajaNamestaja.Clear();
+                        Databases.ProdajaNamestajaDatabase.popunjavanjeProdaja();
                         view.Refresh();
                     }
                 }

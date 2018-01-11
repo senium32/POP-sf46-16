@@ -17,7 +17,7 @@ namespace POP_sf46_16_GUI.model
         public ObservableCollection<TipNamestaja> TipoviNamestaja { get; set; }
         public ObservableCollection<Namestaj> Namestaj { get; set; }
         public ObservableCollection<DodatnaUsluga> DodatnaUsluga { get; set; }
-
+        public ObservableCollection<ProdajaNamestaja> ProdajaNamestaja { get; set; }
         public ObservableCollection<Akcija> Akcije { get; set; }
 
         public string ConnectionStr = @"Server=localhost\SQLEXPRESS;Initial Catalog=SeniumSalon;Trusted_Connection=True;";
@@ -28,6 +28,7 @@ namespace POP_sf46_16_GUI.model
             Korisnici = new ObservableCollection<Korisnik>();
             Akcije = new ObservableCollection<Akcija>();
             DodatnaUsluga = new ObservableCollection<DodatnaUsluga>();
+            ProdajaNamestaja = new ObservableCollection<ProdajaNamestaja>();
         }
     }
 }

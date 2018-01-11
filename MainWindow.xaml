@@ -20,7 +20,7 @@
             <Button Name="btnNamestaji" Background="LightGreen" DockPanel.Dock="Left" Width="150" Height="40" Margin="5 10 5 10" Click="btnNamestaji_Click" Content="Namestaji"></Button>
             <Button Name="btnTipNamestaja" Background="LightGreen" DockPanel.Dock="Left"  Width="150" Height="40" Margin="5 10 5 10" Click="btnTipNamestaja_Click" Content="Tip Namestaja"></Button>
             <Button Click="btnDodatnaUsluga_Click" Margin="5 10 5 10" Name="btnDodatnaUsluga" Content="Dodatne Usluge" Background="LightGreen" Width="150" Height="40"></Button>
-            <Button Name="btnIzlaz" Margin="5 18 5 10" Height="40"  Click="btnIzlaz_Click" Background="LightGray" Width="150" Content="Izlaz"></Button>
+            <Button Click="btnProdaja_Click" Margin="5 10 5 10" Name="btnProdaja" Content="Prodaje" Background="LightGreen" Width="150" Height="40"></Button>
         </StackPanel>
         <StackPanel DockPanel.Dock="Right">
             <Border DockPanel.Dock="right" Margin="10" CornerRadius="10" Background="LightGreen">
@@ -29,10 +29,10 @@
                 </DataGrid>
             </Border>
             <Grid>
-                <Button Name="btnDodaj" Width="70" Height="40" Content="Dodaj" Margin="93,40,271,5" Click="btnDodaj_Click"/>
-                <Button Name="btnIzmeni" Width="70" Height="40" Content="Izmeni" Margin="186,40,176,5" Click="btnIzmeni_Click"/>
-                <Button Name="btnObrisi" Width="70" Height="40" Content="Obrisi" Margin="279,40,84,5" Click="btnObrisi_Click"/>
-                
+                <Button Name="btnDodaj" Width="70" Height="40" Content="Dodaj" Margin="70,35,294,10" Click="btnDodaj_Click"/>
+                <Button Name="btnIzmeni" Width="70" Height="40" Content="Izmeni" Margin="161,35,203,10" Click="btnIzmeni_Click"/>
+                <Button Name="btnObrisi" Width="70" Height="40" Content="Obrisi" Margin="254,35,110,10" Click="btnObrisi_Click"/>
+                <Button x:Name="btnIzlaz"  Height="30"  Click="btnIzlaz_Click" Background="LightGray" Width="70" Content="Izlaz" RenderTransformOrigin="1.052,0.28" Margin="354,45,10,10"/>
             </Grid>
         </StackPanel>
     </DockPanel>

@@ -87,6 +87,9 @@
     <Compile Include="GUI\LoginGreska.xaml.cs">
       <DependentUpon>LoginGreska.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ProdajaWindow.xaml.cs">
+      <DependentUpon>ProdajaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\GenericSerialize.cs" />
     <Page Include="GUI\DodajDodatakWindow.xaml">
       <SubType>Designer</SubType>
@@ -121,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\LoginGreska.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\ProdajaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

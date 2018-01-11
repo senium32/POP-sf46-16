@@ -30,6 +30,7 @@ namespace POP_sf46_16_GUI.GUI
             Databases.TipNamestajaDatabase.popunjavanjeTipaNamestaja();
             Databases.AkcijaDatabase.popunjavanjeAkcija();
             Databases.NamestajDatabase.popunjavanjeNamestaja();
+            Databases.ProdajaNamestajaDatabase.popunjavanjeProdaja();
         }
 
         private void btnIzlaz_Click(object sender, RoutedEventArgs e)
